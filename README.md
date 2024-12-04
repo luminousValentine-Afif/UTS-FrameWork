@@ -6,9 +6,8 @@ Aplikasi ini merupakan sistem penjualan motor yang dibangun menggunakan Django R
 
 ## **Fitur**
 
-- **Autentikasi JWT**: Sistem login dengan menggunakan token JWT (SimpleJWT) untuk otentikasi pengguna.
-- **Manajemen Pengguna**: CRUD pengguna dengan peran admin, staff, dan user, serta kontrol akses berdasarkan peran.
-- **Manajemen Motor**: CRUD data motor dan kategorinya, khususnya untuk admin.
+- **Manajemen Pengguna**: CRUD pengguna dengan peran admin, staff, dan view, serta kontrol akses berdasarkan peran.
+- **Manajemen Motor**: CRUD data motor dan kategorinya, khususnya untuk admin dan staff.
 - **Role-Based Access Control (RBAC)**: Pengguna dibatasi aksesnya sesuai dengan peran mereka (admin, staff, user).
 - **API Terstruktur**: Endpoint API yang jelas dan terstruktur untuk memudahkan integrasi dengan aplikasi lain.
 
@@ -26,7 +25,7 @@ Berikut adalah diagram ERD (Entity Relationship Diagram) yang menggambarkan hubu
 
 Berikut adalah diagram ERD (Entity Relationship Diagram) yang menggambarkan hubungan antar entitas dalam sistem:
 
-![ERD Diagram](ERD_Penjualan_Motor.drawio.png)
+![ERD Diagram](ClassDiagram_Penjualan_Motor_Gambar.drawio.png)
 
 ---
 
