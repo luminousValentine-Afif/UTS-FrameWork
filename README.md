@@ -41,10 +41,9 @@ Aplikasi ini membutuhkan beberapa dependensi yang tercantum dalam `requirements.
 
 1. **Aktifkan Virtual Environment**
    
-   Pastikan membuat dan mengaktifkan virtual environment untuk proyek ini agar menghindari konflik dengan package lain di pada sistem anda.
+   Pastikan mengaktifkan virtual environment untuk proyek ini agar menghindari konflik dengan package lain di pada sistem anda.
 
    ```bash
-   python -m venv myenv
    source myenv/bin/activate  # Untuk MacOS/Linux
    myenv\Scripts\activate     # Untuk Windows
 
