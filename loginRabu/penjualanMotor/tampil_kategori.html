@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loginauth.js"></script>
+    <title>Daftar Kategori</title>
+</head>
+
+<body class="bg-light">
+    <div class="preload"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html">AFZA Motor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#project">Galeri Unit</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#pencapaian">Pencapaian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#kontak">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tampil_brg.html">Toko</a>
+                    </li>
+                    <li class="nav-item dropdown" id="storeDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tokoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Store Settings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampilToko.html">Toko</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_kategori.html">Kategori</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="penggunaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pengguna
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_user.html">Daftar Pengguna</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_role.html">Daftar Role</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center me-3">
+                    <span id="user-greeting" class="me-3 text-secondary"></span>
+                </div>
+                <div class="d-flex justify-content-end align-items-center me-3">
+                    <button class="btn custom-logout-btn rounded-pill px-4 py-2 d-flex align-items-center gap-2" type="submit" id="logout">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6.5 15a.5.5 0 0 1-.5-.5V14h-.5A1.5 1.5 0 0 1 4 12.5v-9A1.5 1.5 0 0 1 5.5 2h.5v-.5a.5.5 0 0 1 1 0V2h2.5a.5.5 0 0 1 0 1H6v10h3.5a.5.5 0 0 1 0 1H6v.5a.5.5 0 0 1-.5.5zM11.146 8.354a.5.5 0 0 0 0-.708L9.707 6.207a.5.5 0 1 0-.707.707L10.293 8l-1.293 1.293a.5.5 0 0 0 .707.707l1.439-1.439z"/>
+                        </svg>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Daftar Kategori</h1>
+        <button class="btn btn-primary mb-4" onclick="window.location.href='tambahKategori.html'" id="tambah_kategori">Tambahkan Kategori</button>
+        <table class="table table-striped table-bordered mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nama Kategori</th>
+                    <th>Deskripsi</th>
+                    <th id="aksiKategorinya">Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="kategori-list">
+                <!-- Data akan diisi melalui JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row fixed-bottom">
+        <div class="col text-center">
+            Ahmad Afifur Ridho - Amirullah Irza Suhardiman
+        </div>
+    </div>
+
+    <script>
+        // Fetch data dari API
+        // Fetch data dari API
+        const fetchKategoris = async () => {
+            try {
+                const token = localStorage.getItem('access');
+
+                if (!token) {
+                    alert('Token tidak ditemukan, pastikan Anda sudah login');
+                    window.location.href = '../login/login.html';
+                    return;
+                }
+
+                const response = await fetch('http://127.0.0.1:8000/api/kategori-motor/', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error('Error Response:', errorText);
+                    throw new Error(`Error fetching data: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Render data ke HTML
+                const tableBody = document.getElementById('kategori-list');
+                tableBody.innerHTML = '';
+                data.forEach((kategori) => {
+                    const row = `
+                        <tr>
+                            <td>${kategori.nama_kategori}</td>
+                            <td>${kategori.keterangan}</td>
+                            <td id="duaAksiKategorii">
+                                <button class="btn btn-warning btn-sm" onclick="editKategori(${kategori.id})">Edit</button>
+                                <button class="btn btn-danger btn-sm" onclick="deleteKategori(${kategori.id})">Delete</button>
+                            </td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            } catch (error) {
+                console.error('Error fetching kategoris:', error);
+            }
+        };
+
+        // Hapus kategori
+        const deleteKategori = async (id) => {
+            try {
+                const token = localStorage.getItem('access');
+
+                if (!token) {
+                    alert('Token tidak ditemukan, pastikan Anda sudah login');
+                    window.location.href = '../login/login.html';
+                    return;
+                }
+
+                const confirmDelete = confirm('Apakah Anda yakin ingin menghapus kategori ini?');
+                if (!confirmDelete) return;
+
+                const response = await fetch(`http://127.0.0.1:8000/api/kategori-motor/${id}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                    },
+                });
+
+                if (response.status === 204) {
+                    alert('Kategori berhasil dihapus');
+                    fetchKategoris(); // Refresh data setelah delete
+                } else {
+                    const errorText = await response.text();
+                    console.error('Error Response:', errorText);
+                    alert('Gagal menghapus kategori');
+                }
+            } catch (error) {
+                console.error('Error deleting kategori:', error);
+            }
+        };
+
+        // Edit kategori
+        // Edit kategori
+        const editKategori = (id) => {
+            window.location.href = `edit_kategori.html?id=${id}`;
+        };
+
+        fetchKategoris();
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>

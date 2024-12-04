@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/loginauth.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <title>Daftar Motor</title>
+</head>
+
+<body class="bg-light">
+    <div class="preload"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html">AFZA Motor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#project">Galeri Unit</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#pencapaian">Pencapaian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#kontak">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tampil_brg.html">Toko</a>
+                    </li>
+                    <li class="nav-item dropdown" id="storeDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tokoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Store Settings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampilToko.html">Toko</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_kategori.html">Kategori</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="penggunaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pengguna
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_user.html">Daftar Pengguna</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_role.html">Daftar Role</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center me-3">
+                    <span id="user-greeting" class="me-3 text-secondary"></span>
+                </div>
+                <div class="d-flex justify-content-end align-items-center me-3">
+                    <button class="btn custom-logout-btn rounded-pill px-4 py-2 d-flex align-items-center gap-2" type="submit" id="logout">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6.5 15a.5.5 0 0 1-.5-.5V14h-.5A1.5 1.5 0 0 1 4 12.5v-9A1.5 1.5 0 0 1 5.5 2h.5v-.5a.5.5 0 0 1 1 0V2h2.5a.5.5 0 0 1 0 1H6v10h3.5a.5.5 0 0 1 0 1H6v.5a.5.5 0 0 1-.5.5zM11.146 8.354a.5.5 0 0 0 0-.708L9.707 6.207a.5.5 0 1 0-.707.707L10.293 8l-1.293 1.293a.5.5 0 0 0 .707.707l1.439-1.439z"/>
+                        </svg>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Motor Tersedia</h1>
+        <!-- <button class="btn btn-primary mb-4" onclick="window.location.href='tambahMotor.html'" id="tambah_motor">Tambahkan Motor</button> -->
+        
+        <!-- Kontainer untuk kartu -->
+        <div class="row" id="motor-list">
+            <!-- Data akan diisi melalui JavaScript -->
+        </div>
+    </div>
+    
+
+    <div class="row fixed-bottom">
+        <div class="col text-center">
+            Ahmad Afifur Ridho - Amirullah Irza Suhardiman
+        </div>
+    </div>
+
+    
+
+    <script>
+
+            // Fungsi untuk menangani penghapusan motor
+            const deleteMotor = async (motorId) => {
+                const token = localStorage.getItem('access');
+                if (confirm("Apakah Anda yakin ingin menghapus motor ini?")) {
+                    try {
+                        const response = await fetch(`http://127.0.0.1:8000/api/motors/${motorId}/`, {
+                            method: 'DELETE',
+                            headers: {
+                                'Authorization': `Bearer ${token}`,
+                                'Content-Type': 'application/json',
+                            },
+                        });
+        
+                        if (response.ok) {
+                            alert('Motor berhasil dihapus');
+                            fetchMotors(); // Refresh daftar motor
+                        } else {
+                            const errorText = await response.text();
+                            // console.error('Error:', errorText);
+                            alert('Gagal menghapus motor');
+                        }
+                    } catch (error) {
+                        // console.error('Error:', error);
+                    }
+                }
+            };
+        
+            // Fungsi untuk menangani pengeditan motor
+            const editMotor = (motorId) => {
+                // Redirect ke halaman edit dengan ID motor
+                window.location.href = `edit_motor.html?id=${motorId}`;
+            };
+        
+            // Fetch data dari API
+            const fetchMotors = async () => {
+                const token = localStorage.getItem('access');
+                try {
+                    if (!token) {
+                        alert('Token tidak ditemukan, pastikan Anda sudah login');
+                        window.location.href = '../login/login.html';
+                        return;
+                    }
+            
+                    const response = await fetch('http://127.0.0.1:8000/api/motor/', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json',
+                        },
+                    });
+            
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`Error fetching data: ${response.status}`);
+                    }
+            
+                    const data = await response.json();
+            
+                    // Render data ke layout kartu
+                    const motorList = document.getElementById('motor-list');
+                    motorList.innerHTML = '';
+                    data.forEach((motor) => {
+                        const card = `
+                            <div class="card">
+                                <img src="http://127.0.0.1:8000${motor.gambar}" alt="${motor.nama_motor}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${motor.nama_motor}</h5>
+                                    <p class="card-text">Merk: ${motor.merk}</p>
+                                    <p class="card-text">Harga: Rp ${motor.harga.toLocaleString()}</p>
+                                    <p class="card-text">Stok: ${motor.stok}</p>
+                                    <p class="card-text">${motor.keterangan}</p>
+                                    <p class="card-text"><small class="text-muted">Kategori: ${motor.kategori_motor_display}</small></p>
+                                </div>
+                                <!-- <div class="card-footer" id="aksi">
+                                    <button class="btn btn-warning btn-sm" onclick="editMotor(${motor.id})">Edit</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteMotor(${motor.id})">Delete</button>
+                                </div> -->
+                            </div>
+                        `;
+                        motorList.innerHTML += card;
+                    });
+                } catch (error) {
+                    console.error('Error fetching motors:', error);
+                }
+            };
+            
+        
+
+        // Panggil fungsi untuk fetch data
+        fetchMotors();
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loginauth.js"></script>
+    <title>Tambah Motor</title>
+</head>
+
+<body>
+    <div class="preload"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html">AFZA Motor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#project">Galeri Unit</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang Kami
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#pencapaian">Pencapaian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#kontak">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tampil_brg.html">Toko</a>
+                    </li>
+                    <li class="nav-item dropdown" id="storeDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tokoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Store Settings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampilToko.html">Toko</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_kategori.html">Kategori</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pengguna
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_user.html">Daftar Pengguna</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tampil_role.html">Daftar Role</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center me-3">
+                    <span id="user-greeting" class="me-3 text-secondary"></span>
+                </div>
+                <div class="d-flex justify-content-end align-items-center me-3">
+                    <button class="btn custom-logout-btn rounded-pill px-4 py-2 d-flex align-items-center gap-2" type="submit" id="logout">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6.5 15a.5.5 0 0 1-.5-.5V14h-.5A1.5 1.5 0 0 1 4 12.5v-9A1.5 1.5 0 0 1 5.5 2h.5v-.5a.5.5 0 0 1 1 0V2h2.5a.5.5 0 0 1 0 1H6v10h3.5a.5.5 0 0 1 0 1H6v.5a.5.5 0 0 1-.5.5zM11.146 8.354a.5.5 0 0 0 0-.708L9.707 6.207a.5.5 0 1 0-.707.707L10.293 8l-1.293 1.293a.5.5 0 0 0 .707.707l1.439-1.439z"/>
+                        </svg>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Tambah Motor -->
+    <div class="container my-5">
+        <div class="form-container p-4">
+            <h1 class="text-center mb-4">Tambah Motor</h1>
+            <form id="addMotorForm" enctype="multipart/form-data">
+                <div class="form-item">
+                    <label for="nama_motor">Nama Motor:</label>
+                    <input type="text" id="nama_motor" name="nama_motor" required>
+                </div>
+                <div class="form-item">
+                    <label for="merk">Merk:</label>
+                    <input type="text" id="merk" name="merk" required>
+                </div>
+                <div class="form-item">
+                    <label for="harga">Harga:</label>
+                    <input type="number" id="harga" name="harga" step="0.01" required>
+                </div>
+                <div class="form-item">
+                    <label for="stok">Stok:</label>
+                    <input type="number" id="stok" name="stok" required>
+                </div>
+                <div class="form-item">
+                    <label for="keterangan">Keterangan:</label>
+                    <textarea id="keterangan" name="keterangan" rows="4"></textarea>
+                </div>
+                <div class="form-item">
+                    <label for="kategori_motor">Kategori Motor:</label>
+                    <select id="kategori_motor" name="kategori_motor" required>
+                        <option value="" disabled selected>Pilih Kategori</option>
+                        <!-- Kategori akan diisi oleh JavaScript -->
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="gambar">Gambar:</label>
+                    <input type="file" id="gambar" name="gambar" accept="image/*">
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-primary mb-4 w-50" onclick="window.location.href='tampilToko.html'">Kembali</button>
+                    <button type="submit" class="btn btn-primary mb-4 w-15">Tambah Motor</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row fixed-bottom">
+        <div class="col text-center">
+            Ahmad Afifur Ridho - Amirullah Irza Suhardiman
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengambil kategori
+        const fetchCategories = async () => {
+            try {
+                const token = localStorage.getItem('access');
+                if (!token) {
+                    alert('Anda belum login. Silakan login terlebih dahulu.');
+                    return;
+                }
+
+                const response = await fetch('http://127.0.0.1:8000/api/kategori-motor/', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (response.ok) {
+                    const categories = await response.json();
+                    const categorySelect = document.getElementById('kategori_motor');
+                    categories.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category.id;
+                        option.textContent = category.nama_kategori;
+                        categorySelect.appendChild(option);
+                    });
+                } else {
+                    console.error('Error fetching categories:', response.status);
+                    alert('Gagal mengambil kategori. Silakan coba lagi.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan saat mengambil kategori.');
+            }
+        };
+
+        // Event submit form
+        document.getElementById('addMotorForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData();
+            formData.append('nama_motor', document.getElementById('nama_motor').value);
+            formData.append('merk', document.getElementById('merk').value);
+            formData.append('harga', document.getElementById('harga').value);
+            formData.append('stok', document.getElementById('stok').value);
+            formData.append('keterangan', document.getElementById('keterangan').value);
+            formData.append('kategori_motor', document.getElementById('kategori_motor').value);
+            formData.append('gambar', document.getElementById('gambar').files[0]);
+
+            try {
+                const token = localStorage.getItem('access');
+                if (!token) {
+                    alert('Anda belum login. Silakan login terlebih dahulu.');
+                    return;
+                }
+
+                const response = await fetch('http://127.0.0.1:8000/api/motor/', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                    },
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    alert('Motor berhasil ditambahkan!');
+                    window.location.href = 'tampilToko.html';
+                    document.getElementById('addMotorForm').reset();
+                } else {
+                    const errorData = await response.json();
+                    alert(`Error: ${JSON.stringify(errorData)}`);
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Terjadi kesalahan. Silakan coba lagi.');
+            }
+        });
+
+        // Panggil fetchCategories
+        fetchCategories();
+    </script>
+    <script src="js/profile.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>

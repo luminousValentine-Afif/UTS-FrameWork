@@ -1,0 +1,1 @@
+$('.preload').fadeOut(1000);

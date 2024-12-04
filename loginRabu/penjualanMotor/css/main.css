@@ -1,0 +1,441 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #222222;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+table.utama {
+    width: 100vw;
+    border-spacing: 0;
+}
+
+table.utama tr td {
+    width: calc(100%/12);
+    padding: 10px 20px;
+}
+
+.menu {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 6px;
+    color: #222222;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu:hover {
+    background-color: #00c39a;
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+}
+
+.avatar {
+    border-radius: 100px 0 100px 0;
+}
+
+.my-5 {
+    margin: 2.5rem auto;
+}
+
+.edu {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #00c39a;
+    border-radius: 6px;
+    color: #00c39a;
+    transition: all 0.2s ease-in-out;
+    margin-left: 1rem;
+}
+
+.edu:hover {
+    background-color: #00c39a;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #00c39a;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 6px;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #06a07f;
+}
+
+.box {
+    background-color: red;
+    width: calc(100%/2);
+    padding: 80px !important;
+}
+
+.box>* {
+    color: #ffffff;
+}
+
+.projek {
+    transition: all 0.3s ease-in-out;
+}
+
+.projek:hover {
+    transform: scale(1.08);
+}
+
+.box-one {
+    background-color: #6b5ce5;
+    background-image: url('https://assets-global.website-files.com/64a99aa7fb7bf4cdf77c57d6/64a9a267c2052d300ee39052_background-blur.webp');
+    border-radius: 10px 0 0 0;
+}
+
+.box-two {
+    background-color: #eec465;
+    background-image: url('https://assets-global.website-files.com/64a99aa7fb7bf4cdf77c57d6/64a9a267c2052d300ee39052_background-blur.webp');
+    border-radius: 0 10px 0 0;
+}
+
+.box-three {
+    background-color: #00c39a;
+    background-image: url('https://assets-global.website-files.com/64a99aa7fb7bf4cdf77c57d6/64a9a267c2052d300ee39052_background-blur.webp');
+    border-radius: 0 0 0 10px;
+}
+
+.box-four {
+    background-color: #0ec5dd;
+    background-image: url('https://assets-global.website-files.com/64a99aa7fb7bf4cdf77c57d6/64a9a267c2052d300ee39052_background-blur.webp');
+    border-radius: 0 0 10px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.heading {
+    padding-top: 100px !important;
+}
+
+.call-to-action {
+    background-image: linear-gradient(to top left, #9552f8, #f177ff);
+    border-radius: 15px;
+    padding: 30px !important;
+}
+
+.call-to-action h1,
+.contact h1 {
+    text-align: center;
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.call-to-action form {
+    padding: 0 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.call-to-action .form-item,
+.contact .form-item {
+    margin-bottom: 15px;
+}
+
+.call-to-action .form-item label,
+.contact .form-item label {
+    color: #fff;
+    font-weight: 500;
+}
+
+.call-to-action .form-item label,
+.call-to-action .form-item input,
+.contact .form-item label,
+.contact .form-item input {
+    height: 20px;
+}
+
+.call-to-action .form-item input,
+.call-to-action .form-item textarea,
+.contact .form-item input,
+.contact .form-item textarea {
+    padding: 15px;
+}
+
+.call-to-action .form-item label,
+.call-to-action .form-item input,
+.call-to-action .form-item textarea,
+.contact .form-item label,
+.contact .form-item input,
+.contact .form-item textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+}
+
+.call-to-action .form-item input,
+.call-to-action .form-item textarea,
+.contact .form-item input,
+.contact .form-item textarea {
+    outline: 2.5px solid transparent;
+    transition: all 0.2s ease-in-out;
+    margin-top: 4px;
+}
+
+.call-to-action .form-item input:focus,
+.call-to-action .form-item textarea:focus,
+.contact .form-item input:focus,
+.contact .form-item textarea:focus {
+    outline-color: #00c39a;
+}
+
+.contact {
+    background-image: linear-gradient(to top left, #9552f8, #f177ff);
+    border-radius: 15px;
+    padding: 30px !important;
+}
+
+.contact form {
+    padding-right: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #17a2b8;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #138496;
+}
+
+.custom-logout-btn {
+    background-color: #45a049; /* Warna latar tombol */
+    color: white; /* Warna teks */
+    border: none; /* Hilangkan border */
+    transition: background-color 0.3s ease; /* Animasi halus saat hover */
+}
+
+.custom-logout-btn:hover {
+    background-color: #af4c6a;
+}
+
+.custom-logout-btn svg {
+    fill: white; /* Warna ikon SVG agar sesuai dengan teks */
+}
+
+.navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1020; /* Pastikan tetap di atas elemen lainnya */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan opsional */
+    }
+
+.fixed-bottom {
+    bottom: 0;
+    width: 100%; /* Agar elemen memenuhi lebar halaman */
+    background-color: #f8f9fa; /* Opsional: beri warna latar */
+    padding: 10px 0; /* Opsional: beri jarak dalam */
+}
+
+#kontak {
+    background-color: #f9f9f9; /* Warna latar belakang yang ringan */
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk estetika */
+}
+
+.call-to-action h1 {
+    color: #4a4a4a; /* Warna teks judul */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #ced4da; /* Tambahkan border */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button[type="submit"] {
+    background-color: #28a745; /* Warna tombol hijau */
+    color: #fff; /* Warna teks putih */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+textarea {
+    resize: none; /* Nonaktifkan pengubahan ukuran */
+}
+
+.text-container {
+    padding-left: 20px; /* Kurangi padding jika terlalu besar */
+    margin-left: -10px; /* Geser lebih ke kiri */
+}
+
+/* Atur ulang tabel */
+.table {
+    table-layout: auto;
+}
+
+.table th, .table td {
+    vertical-align: middle; /* Supaya teks sejajar tengah */
+}
+
+.table img {
+    max-width: 100px;
+    max-height: 80px;
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+}
+
+/* Atur tombol aksi */
+.table td .btn {
+    font-size: 0.875rem; /* Sesuaikan ukuran font tombol */
+    padding: 0.4rem 0.6rem; /* Perkecil padding */
+    line-height: 1.2; /* Tinggi baris lebih kecil */
+}
+
+.table td .btn-sm {
+    margin-right: 0.2rem; /* Jarak antar tombol */
+}
+
+#motor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #212529;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #495057;
+    margin: 5px 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card-footer .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.preload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.preload::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-left: 0;
+    border-bottom: 0;
+    border-top: 0;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
