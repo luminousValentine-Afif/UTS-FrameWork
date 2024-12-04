@@ -89,27 +89,31 @@ Aplikasi ini membutuhkan beberapa dependensi yang tercantum dalam `requirements.
 ## **User Login**
 
 SuperUser : 
+         
          Username : afifur
          password : afifur
 
 Admin :
+
          username : amirullah
          password : irza
-         `
+         
          username : ahmad
          password : afifur
 
 Staff :
+
          username : ahmads
          password : ahmads
-         `
+         
          username : irzas
          password : irzas
 
 View :
+
          username : ahmadv
          password : ahmadv
-         `
+         
          username : irzav
          password : irzav
 
