@@ -83,7 +83,7 @@ Aplikasi ini membutuhkan beberapa dependensi yang tercantum dalam `requirements.
 
    ```bash
    http://127.0.0.1:8000/
-
+   ```
 ---
 
 ## **Kesimpulan**
