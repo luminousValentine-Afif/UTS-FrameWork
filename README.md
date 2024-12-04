@@ -22,6 +22,14 @@ Berikut adalah diagram ERD (Entity Relationship Diagram) yang menggambarkan hubu
 
 ---
 
+## **Gambar Class Diagram**
+
+Berikut adalah diagram ERD (Entity Relationship Diagram) yang menggambarkan hubungan antar entitas dalam sistem:
+
+![ERD Diagram](ERD_Penjualan_Motor.drawio.png)
+
+---
+
 ## **requirements.txt**
 
 File `requirements.txt` berisi daftar dependencies yang dibutuhkan untuk menjalankan aplikasi ini. Berikut adalah penjelasan singkat tentang beberapa dependencies yang ada dalam file tersebut:
