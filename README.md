@@ -18,7 +18,7 @@ Aplikasi ini merupakan sistem penjualan motor yang dibangun menggunakan Django R
 
 Berikut adalah diagram ERD (Entity Relationship Diagram) yang menggambarkan hubungan antar entitas dalam sistem:
 
-![ERD Diagram](path/to/erd-image.png)
+![ERD Diagram](ERD_Penjualan_Motor.drawio.png)
 
 ---
 
