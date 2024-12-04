@@ -1,6 +1,6 @@
 # **Aplikasi Penjualan Motor**
 
-Aplikasi ini merupakan sistem penjualan motor yang dibangun menggunakan Django Rest Framework. Proyek ini menyediakan API untuk manajemen motor, kategori motor, dan pengguna, dengan autentikasi berbasis token JWT dan kontrol akses berbasis peran (admin, staff, user).
+Aplikasi ini merupakan sistem penjualan motor yang dibangun menggunakan Django Rest Framework. Proyek ini menyediakan API untuk manajemen motor, kategori motor, dan pengguna, dan role (admin, staff, view).
 
 ---
 
@@ -23,21 +23,20 @@ Berikut adalah diagram ERD (Entity Relationship Diagram) yang menggambarkan hubu
 
 ## **Gambar Class Diagram**
 
-Berikut adalah diagram ERD (Entity Relationship Diagram) yang menggambarkan hubungan antar entitas dalam sistem:
+Berikut adalah diagram Class Diagram:
 
 ![ERD Diagram](ClassDiagram_Penjualan_Motor_Gambar.drawio.png)
 
 ---
 
-## **requirements.txt**
+## **Requirements**
 
-File `requirements.txt` berisi daftar dependencies yang dibutuhkan untuk menjalankan aplikasi ini. Berikut adalah penjelasan singkat tentang beberapa dependencies yang ada dalam file tersebut:
+Aplikasi ini membutuhkan beberapa dependensi yang tercantum dalam `requirements.txt`. Berikut adalah cara untuk menginstal semua dependensi yang diperlukan:
 
-- **Django**: Framework untuk membangun aplikasi web dan API.
-- **Django Rest Framework (DRF)**: Digunakan untuk membangun API RESTful dengan Django.
-- **SimpleJWT**: Untuk autentikasi menggunakan JWT (JSON Web Token).
-- **djangorestframework-simplejwt**: Sebagai ekstensi untuk menggunakan SimpleJWT di Django.
-- **django-cors-headers**: Untuk menangani CORS (Cross-Origin Resource Sharing) agar API dapat diakses dari berbagai domain.
+1. **Buat Virtual Environment**  
+   Pastikan membuat dan mengaktifkan virtual environment untuk proyek ini agar menghindari konflik dengan package lain di pada sistem anda.
 
-Contoh file `requirements.txt`:
-
+   ```bash
+   python -m venv env
+   source env/bin/activate  # Untuk MacOS/Linux
+   env\Scripts\activate     # Untuk Windows
