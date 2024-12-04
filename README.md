@@ -48,14 +48,14 @@ Aplikasi ini membutuhkan beberapa dependensi yang tercantum dalam `requirements.
    source myenv/bin/activate  # Untuk MacOS/Linux
    myenv\Scripts\activate     # Untuk Windows
 
-3. **Install Dependencies**
+2. **Install Dependencies**
    
    Setelah virtual environment diaktifkan, instal semua dependensi yang diperlukan dengan menjalankan perintah berikut:
    
    ```bash
    pip install -r requirements.txt
 
-4. **Migrasi Database**
+3. **Migrasi Database**
    
    Setelah menginstal dependensi, jalankan perintah migrasi :
    
@@ -63,27 +63,27 @@ Aplikasi ini membutuhkan beberapa dependensi yang tercantum dalam `requirements.
    python manage.py makemigrations
    python manage.py migrate
 
-6. **Create Superuser (Opsional)**
+4. **Create Superuser (Opsional)**
    
    Membuat superuser untuk login ke admin dengan perintah berikut: (Opsional)
    
    ```bash
    python manage.py createsuperuser
 
-8. **Run Server Django**
+5. **Run Server Django**
    
    Jalankan di terminal
    
    ```bash
    python manage.py runserver
 
-10. **Akses Aplikasi**
-    
+6. **Akses Aplikasi**
+
    Buka browser dan akses aplikasi di alamat berikut:
 
    ```bash
    http://127.0.0.1:8000/
-   ```
+
 ---
 
 ## **Kesimpulan**
