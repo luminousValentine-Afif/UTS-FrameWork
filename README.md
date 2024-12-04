@@ -86,6 +86,35 @@ Aplikasi ini membutuhkan beberapa dependensi yang tercantum dalam `requirements.
 
 ---
 
+## **User Login**
+
+SuperUser : 
+         Username : afifur
+         password : afifur
+
+Admin :
+         username : amirullah
+         password : irza
+         `
+         username : ahmad
+         password : afifur
+
+Staff :
+         username : ahmads
+         password : ahmads
+         `
+         username : irzas
+         password : irzas
+
+View :
+         username : ahmadv
+         password : ahmadv
+         `
+         username : irzav
+         password : irzav
+
+---
+
 ## **Kesimpulan**
 
 Proyek Penjualan Motor ini dibuat sebagai sistem manajemen penjualan motor yang umum digunakan dalam bisnis penjualan motor. Aplikasi ini memungkinkan pengelolaan data penjualan motor, kategori motor, dan pengguna, serta memberikan kemudahan dalam menjalankan operasional sehari-hari.
