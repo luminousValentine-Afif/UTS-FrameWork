@@ -8,7 +8,7 @@ Aplikasi ini merupakan sistem penjualan motor yang dibangun menggunakan Django R
 
 - **Manajemen Pengguna**: CRUD pengguna dengan peran admin, staff, dan view, serta kontrol akses berdasarkan peran.
 - **Manajemen Motor**: CRUD data motor dan kategorinya, khususnya untuk admin dan staff.
-- **Role-Based Access Control (RBAC)**: Pengguna dibatasi aksesnya sesuai dengan peran mereka (admin, staff, user).
+- **Role-Based Access Control (RBAC)**: Pengguna dibatasi aksesnya sesuai dengan peran mereka (admin, staff, view).
 - **API Terstruktur**: Endpoint API yang jelas dan terstruktur untuk memudahkan integrasi dengan aplikasi lain.
 
 ---
